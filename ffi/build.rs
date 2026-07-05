@@ -6,7 +6,7 @@ fn main() {
     let status = Command::new("cbindgen")
         .arg(".")
         .arg("-o")
-        .arg("include/llt.h")
+        .arg("../include/llt.h")
         .status()
         .expect("failed to run cbindgen");
 
