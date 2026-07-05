@@ -1,12 +1,11 @@
-/* 
+use model::project::Project;
+
+
 #[unsafe(no_mangle)]
 pub extern "C" fn add(a: i32, b: i32) -> i32 {
     a + b
 }
 
-//
-// PROJECT FUNCTIONS
-//
 #[unsafe(no_mangle)]
 pub extern "C" fn project_new() -> *mut Project {
     let p: Box<Project> = Box::new(Project::new());
@@ -19,6 +18,7 @@ pub extern "C" fn project_free(pp: *mut Project) {
     unsafe { drop(Box::from_raw(pp)) }
 }
 
+/* 
 // Заготовка для функций изменения структур
 #[unsafe(no_mangle)]
 pub extern "C" fn project_(pp: *mut Project) -> *mut Project {

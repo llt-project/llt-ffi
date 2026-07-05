@@ -8,3 +8,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 llt = { git = "https://github.com/llt-project/llt" }
+model = { git = "https://github.com/llt-project/llt" }
